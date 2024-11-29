@@ -1,9 +1,10 @@
 import pygame
+
 from laser import Laser
 
 
 class Spaceship(pygame.sprite.Sprite):
-	
+
 	def __init__(self, screen_width, screen_height, offset):
 		super().__init__()
 		self.offset = offset

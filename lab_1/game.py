@@ -1,14 +1,15 @@
-import pygame, random
-from spaceship import Spaceship
-from obstacle import Obstacle
-from obstacle import grid
-from alien import Alien
+import random
+
+import pygame
+
+from alien import Alien, MysteryShip
 from laser import Laser
-from alien import MysteryShip
+from obstacle import Obstacle, grid
+from spaceship import Spaceship
 
 
 class Game:
-	
+
 	def __init__(self, screen_width, screen_height, offset):
 		self.screen_width = screen_width
 		self.screen_height = screen_height

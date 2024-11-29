@@ -1,5 +1,6 @@
 import pygame
 
+
 class Block(pygame.sprite.Sprite):
 
 	def __init__(self, x, y):
@@ -26,7 +27,7 @@ grid = [
 
 
 class Obstacle:
-	
+
 	def __init__(self, x, y):
 		self.blocks_group = pygame.sprite.Group()
 		for row in range(len(grid)):
