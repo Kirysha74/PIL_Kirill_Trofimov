@@ -49,7 +49,7 @@ class Game:
 
 				if row == 0:
 					alien_type = 3
-				elif row in (1,2):
+				elif row in (1, 2):
 					alien_type = 2
 				else:
 					alien_type = 1

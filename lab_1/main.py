@@ -31,7 +31,7 @@ SHOOT_LASER = pygame.USEREVENT
 pygame.time.set_timer(SHOOT_LASER, 300)
 
 MYSTERYSHIP = pygame.USEREVENT + 1
-pygame.time.set_timer(MYSTERYSHIP, random.randint(4000,8000))
+pygame.time.set_timer(MYSTERYSHIP, random.randint(4000, 8000))
 
 while True:
     #Checking for events
