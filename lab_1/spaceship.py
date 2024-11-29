@@ -1,20 +1,22 @@
 import pygame
 from laser import Laser
 
+
 class Spaceship(pygame.sprite.Sprite):
+	
 	def __init__(self, screen_width, screen_height, offset):
 		super().__init__()
 		self.offset = offset
 		self.screen_width = screen_width
 		self.screen_height = screen_height
-		self.image = pygame.image.load("Graphics/spaceship.png")
+		self.image = pygame.image.load("lab_1/Graphics/spaceship.png")
 		self.rect = self.image.get_rect(midbottom = ((self.screen_width + self.offset)/2, self.screen_height))
 		self.speed = 6
 		self.lasers_group = pygame.sprite.Group()
 		self.laser_ready = True
 		self.laser_time = 0
 		self.laser_delay = 300
-		self.laser_sound = pygame.mixer.Sound("Sounds/laser.ogg")
+		self.laser_sound = pygame.mixer.Sound("lab_1/Sounds/laser.ogg")
 
 	def get_user_input(self):
 		keys = pygame.key.get_pressed()

@@ -6,7 +6,9 @@ from alien import Alien
 from laser import Laser
 from alien import MysteryShip
 
+
 class Game:
+	
 	def __init__(self, screen_width, screen_height, offset):
 		self.screen_width = screen_width
 		self.screen_height = screen_height
@@ -23,9 +25,9 @@ class Game:
 		self.run = True
 		self.score = 0
 		self.highscore = 0
-		self.explosion_sound = pygame.mixer.Sound("Sounds/explosion.ogg")
+		self.explosion_sound = pygame.mixer.Sound("lab_1/Sounds/explosion.ogg")
 		self.load_highscore()
-		pygame.mixer.music.load("Sounds/music.ogg")
+		pygame.mixer.music.load("lab_1/Sounds/music.ogg")
 		pygame.mixer.music.play(-1)
 
 	def create_obstacles(self):
