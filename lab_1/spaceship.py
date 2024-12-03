@@ -54,5 +54,5 @@ class Spaceship(pygame.sprite.Sprite):
 				self.laser_ready = True
 
 	def reset(self):
-		self.rect = self.image.get_rect(midbottom = ((self.screen_width + self.offset)/2, self.screen_height))
+		self.rect = self.image.get_rect(midbottom=((self.screen_width + self.offset)/2, self.screen_height))
 		self.lasers_group.empty()
