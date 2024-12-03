@@ -10,7 +10,7 @@ from spaceship import Spaceship
 
 class Game:
 
-	def __init__(self, screen_width, screen_height, offset):
+	def __init__(self, screen_width: int, screen_height: int, offset: int) -> None:
 		self.screen_width = screen_width
 		self.screen_height = screen_height
 		self.offset = offset
@@ -31,7 +31,7 @@ class Game:
 		pygame.mixer.music.load("lab_1/Sounds/music.ogg")
 		pygame.mixer.music.play(-1)
 
-	def create_obstacles(self):
+	def create_obstacles(self) -> None:
 		obstacle_width = len(grid[0]) * 3
 		gap = (self.screen_width + self.offset - (4 * obstacle_width))/5
 		obstacles = []
@@ -41,7 +41,7 @@ class Game:
 			obstacles.append(obstacle)
 		return obstacles
 
-	def create_aliens(self):
+	def create_aliens(self) -> None:
 		for row in range(5):
 			for column in range(11):
 				x = 75 + column * 55
@@ -57,7 +57,7 @@ class Game:
 				alien = Alien(alien_type, x + self.offset/2, y)
 				self.aliens_group.add(alien)
 
-	def move_aliens(self):
+	def move_aliens(self) -> None:
 		self.aliens_group.update(self.aliens_direction)
 
 		alien_sprites = self.aliens_group.sprites()
@@ -69,21 +69,21 @@ class Game:
 				self.aliens_direction = 1
 				self.alien_move_down(2)
 
-	def alien_move_down(self, distance):
+	def alien_move_down(self, distance: None) -> None:
 		if self.aliens_group:
 			for alien in self.aliens_group.sprites():
 				alien.rect.y += distance
 
-	def alien_shoot_laser(self):
+	def alien_shoot_laser(self) -> None:
 		if self.aliens_group.sprites():
 			random_alien = random.choice(self.aliens_group.sprites())
 			laser_sprite = Laser(random_alien.rect.center, -6, self.screen_height)
 			self.alien_lasers_group.add(laser_sprite)
 
-	def create_mystery_ship(self):
+	def create_mystery_ship(self) -> None:
 		self.mystery_ship_group.add(MysteryShip(self.screen_width, self.offset))
 
-	def check_for_collisions(self):
+	def check_for_collisions(self) -> None:
 		#Spaceship
 		if self.spaceship_group.sprite.lasers_group:
 			for laser_sprite in self.spaceship_group.sprite.lasers_group:
@@ -127,10 +127,10 @@ class Game:
 				if pygame.sprite.spritecollide(alien, self.spaceship_group, False):
 					self.game_over()
 
-	def game_over(self):
+	def game_over(self) -> None:
 		self.run = False
 
-	def reset(self):
+	def reset(self) -> None:
 		self.run = True
 		self.lives = 3
 		self.spaceship_group.sprite.reset()
@@ -141,14 +141,14 @@ class Game:
 		self.obstacles = self.create_obstacles()
 		self.score = 0
 
-	def check_for_highscore(self):
+	def check_for_highscore(self) -> None:
 		if self.score > self.highscore:
 			self.highscore = self.score
 
 			with open("highscore.txt", "w") as file:
 				file.write(str(self.highscore))
 
-	def load_highscore(self):
+	def load_highscore(self) -> None:
 		try:
 			with open("highscore.txt", "r") as file:
 				self.highscore = int(file.read())

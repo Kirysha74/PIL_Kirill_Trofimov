@@ -19,7 +19,7 @@ grid = [
 
 class Block(pygame.sprite.Sprite):
 
-	def __init__(self, x, y):
+	def __init__(self, x: int, y: int) -> None:
 		super().__init__()
 		self.image = pygame.Surface((3, 3))
 		self.image.fill((243, 216, 63))
@@ -28,7 +28,7 @@ class Block(pygame.sprite.Sprite):
 
 class Obstacle:
 
-	def __init__(self, x, y):
+	def __init__(self, x: int, y: int) -> None:
 		self.blocks_group = pygame.sprite.Group()
 		for row in range(len(grid)):
 			for column in range(len(grid[0])):

@@ -18,7 +18,7 @@ class Alien(pygame.sprite.Sprite):
 
 class MysteryShip(pygame.sprite.Sprite):
 
-	def __init__(self, screen_width, offset):
+	def __init__(self, screen_width: int, offset:int) -> None:
 		super().__init__()
 		self.screen_width = screen_width
 		self.offset = offset
@@ -32,7 +32,7 @@ class MysteryShip(pygame.sprite.Sprite):
 
 		self.rect = self.image.get_rect(topleft=(x, 90))
 
-	def update(self):
+	def update(self) -> None:
 		self.rect.x += self.speed
 		if self.rect.right > self.screen_width + self.offset/2:
 			self.kill()

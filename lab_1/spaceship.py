@@ -5,7 +5,7 @@ from laser import Laser
 
 class Spaceship(pygame.sprite.Sprite):
 
-	def __init__(self, screen_width, screen_height, offset):
+	def __init__(self, screen_width: int, screen_height: int, offset: int) -> None:
 		super().__init__()
 		self.offset = offset
 		self.screen_width = screen_width
@@ -19,7 +19,7 @@ class Spaceship(pygame.sprite.Sprite):
 		self.laser_delay = 300
 		self.laser_sound = pygame.mixer.Sound("lab_1/Sounds/laser.ogg")
 
-	def get_user_input(self):
+	def get_user_input(self) -> None:
 		keys = pygame.key.get_pressed()
 
 		if keys[pygame.K_RIGHT]:
@@ -35,24 +35,24 @@ class Spaceship(pygame.sprite.Sprite):
 			self.laser_time = pygame.time.get_ticks()
 			self.laser_sound.play()
 
-	def update(self):
+	def update(self) -> None:
 		self.get_user_input()
 		self.constrain_movement()
 		self.lasers_group.update()
 		self.recharge_laser()
 
-	def constrain_movement(self):
+	def constrain_movement(self) -> None:
 		if self.rect.right > self.screen_width:
 			self.rect.right = self.screen_width
 		if self.rect.left < self.offset:
 			self.rect.left = self.offset
 
-	def recharge_laser(self):
+	def recharge_laser(self) -> None:
 		if not self.laser_ready:
 			current_time = pygame.time.get_ticks()
 			if current_time - self.laser_time >= self.laser_delay:
 				self.laser_ready = True
 
-	def reset(self):
+	def reset(self) -> None:
 		self.rect = self.image.get_rect(midbottom=((self.screen_width + self.offset)/2, self.screen_height))
 		self.lasers_group.empty()
