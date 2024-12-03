@@ -11,6 +11,7 @@ from spaceship import Spaceship
 class Game:
 
 	def __init__(self, screen_width: int, screen_height: int, offset: int) -> None:
+		"""Create an object of the Game class"""
 		self.screen_width = screen_width
 		self.screen_height = screen_height
 		self.offset = offset
@@ -32,6 +33,7 @@ class Game:
 		pygame.mixer.music.play(-1)
 
 	def create_obstacles(self) -> None:
+		"""Create obstacles on the playing field"""
 		obstacle_width = len(grid[0]) * 3
 		gap = (self.screen_width + self.offset - (4 * obstacle_width))/5
 		obstacles = []
@@ -42,6 +44,7 @@ class Game:
 		return obstacles
 
 	def create_aliens(self) -> None:
+		"""Create aliens on the playing field"""
 		for row in range(5):
 			for column in range(11):
 				x = 75 + column * 55
@@ -58,6 +61,7 @@ class Game:
 				self.aliens_group.add(alien)
 
 	def move_aliens(self) -> None:
+		"""Moves the alien ship"""
 		self.aliens_group.update(self.aliens_direction)
 
 		alien_sprites = self.aliens_group.sprites()
@@ -70,20 +74,24 @@ class Game:
 				self.alien_move_down(2)
 
 	def alien_move_down(self, distance: None) -> None:
+		"""Moves the alien ship down"""
 		if self.aliens_group:
 			for alien in self.aliens_group.sprites():
 				alien.rect.y += distance
 
 	def alien_shoot_laser(self) -> None:
+		"""Creates a shot by an alien ship"""
 		if self.aliens_group.sprites():
 			random_alien = random.choice(self.aliens_group.sprites())
 			laser_sprite = Laser(random_alien.rect.center, -6, self.screen_height)
 			self.alien_lasers_group.add(laser_sprite)
 
 	def create_mystery_ship(self) -> None:
+		"""Create mystery ship :)"""
 		self.mystery_ship_group.add(MysteryShip(self.screen_width, self.offset))
 
 	def check_for_collisions(self) -> None:
+		"""Checks for laser hits"""
 		#Spaceship
 		if self.spaceship_group.sprite.lasers_group:
 			for laser_sprite in self.spaceship_group.sprite.lasers_group:
@@ -128,9 +136,11 @@ class Game:
 					self.game_over()
 
 	def game_over(self) -> None:
+		"""Stops the game if the user loses"""
 		self.run = False
 
 	def reset(self) -> None:
+		"""Updates the playing field"""
 		self.run = True
 		self.lives = 3
 		self.spaceship_group.sprite.reset()
@@ -142,6 +152,7 @@ class Game:
 		self.score = 0
 
 	def check_for_highscore(self) -> None:
+		"""Check the record and update it if the record is broken"""
 		if self.score > self.highscore:
 			self.highscore = self.score
 
@@ -149,6 +160,7 @@ class Game:
 				file.write(str(self.highscore))
 
 	def load_highscore(self) -> None:
+		"""Load highscore from file"""
 		try:
 			with open("highscore.txt", "r") as file:
 				self.highscore = int(file.read())
