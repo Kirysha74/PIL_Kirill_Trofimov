@@ -1,7 +1,9 @@
 import pygame
+from math import *
 
 
 class Laser(pygame.sprite.Sprite):
+	"""A projectile fired by enemies and the user"""
 
 	def __init__(self, position: int, speed: int, screen_height: int) -> None:
 		"""Create an object of the Laser class"""

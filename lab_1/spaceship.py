@@ -4,6 +4,7 @@ from laser import Laser
 
 
 class Spaceship(pygame.sprite.Sprite):
+	"""The class whose object is managed by the user"""
 
 	def __init__(self, screen_width: int, screen_height: int, offset: int) -> None:
 		"""Create an object of the Spaceship class"""

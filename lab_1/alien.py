@@ -4,6 +4,7 @@ import pygame
 
 
 class Alien(pygame.sprite.Sprite):
+	"""The user's enemies"""
 
 	def __init__(self, type, x, y):
 		super().__init__()
@@ -17,6 +18,7 @@ class Alien(pygame.sprite.Sprite):
 
 
 class MysteryShip(pygame.sprite.Sprite):
+	"""An Unusual Enemy of the user"""
 
 	def __init__(self, screen_width: int, offset:int) -> None:
 		"""Create an object of the MysteryShip class"""

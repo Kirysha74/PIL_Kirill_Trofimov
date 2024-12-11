@@ -9,6 +9,7 @@ from spaceship import Spaceship
 
 
 class Game:
+	"""The game interface"""
 
 	def __init__(self, screen_width: int, screen_height: int, offset: int) -> None:
 		"""Create an object of the Game class"""

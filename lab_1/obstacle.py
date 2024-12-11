@@ -18,6 +18,7 @@ grid = [
 
 
 class Block(pygame.sprite.Sprite):
+	"""The class of a static object on the field"""
 
 	def __init__(self, x: int, y: int) -> None:
 		"""Create an object of the Block class"""
@@ -28,6 +29,7 @@ class Block(pygame.sprite.Sprite):
 
 
 class Obstacle:
+	"""A group of objects of the Block class, to create an obstacle"""
 
 	def __init__(self, x: int, y: int) -> None:
 		"""Create an object of the Obstacle class"""
@@ -39,4 +41,3 @@ class Obstacle:
 					pos_y = y + row*3
 					block = Block(pos_x, pos_y)
 					self.blocks_group.add(block)
-
