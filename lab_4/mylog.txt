@@ -1,0 +1,68 @@
+2024-12-14 21:27:30,818 - exampleLogger - INFO - The user started the game
+2024-12-14 21:27:32,656 - exampleLogger - INFO - The user has logged out of the game
+2024-12-14 21:27:51,227 - exampleLogger - INFO - The user started the game
+2024-12-14 21:27:53,845 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:54,392 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:54,492 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:55,174 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:55,974 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:56,135 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:56,813 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:57,322 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:57,439 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:57,710 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:58,008 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:58,544 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:59,045 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:59,456 - exampleLogger - INFO - New highscore!
+2024-12-14 21:27:59,510 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:00,088 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:00,844 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:01,270 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:01,750 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:02,246 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:02,526 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:02,708 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:02,854 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:03,365 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:05,144 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:05,618 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:06,203 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:07,436 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:07,950 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:08,429 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:10,331 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:10,823 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:11,514 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:13,308 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:14,282 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:14,632 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:15,288 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:15,434 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:16,105 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:16,578 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:18,185 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:18,694 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:19,351 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:19,847 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:20,358 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:22,145 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:22,292 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:23,117 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:23,133 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:23,812 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:24,026 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:24,124 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:25,756 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:26,499 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:26,582 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:29,738 - exampleLogger - INFO - New highscore!
+2024-12-14 21:28:29,740 - exampleLogger - INFO - The mystical ship has been destroyed!
+2024-12-14 21:28:36,299 - exampleLogger - INFO - The user has logged out of the game
+2024-12-14 21:28:37,969 - exampleLogger - INFO - The user started the game
+2024-12-14 21:28:41,394 - exampleLogger - INFO - Game over!
+2024-12-14 21:28:43,076 - exampleLogger - INFO - Reset the game!
+2024-12-14 21:29:04,769 - exampleLogger - INFO - The mystical ship has been destroyed!
+2024-12-14 21:29:30,824 - exampleLogger - INFO - New highscore!
+2024-12-14 21:29:30,826 - exampleLogger - INFO - The mystical ship has been destroyed!
+2024-12-14 21:29:34,061 - exampleLogger - INFO - The user has logged out of the game
