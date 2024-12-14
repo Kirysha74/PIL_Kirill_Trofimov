@@ -4,6 +4,7 @@ import pygame
 
 from alien import Alien, MysteryShip
 from laser import Laser
+from logger import logger
 from obstacle import Obstacle, grid
 from spaceship import Spaceship
 
@@ -28,9 +29,9 @@ class Game:
 		self.run = True
 		self.score = 0
 		self.highscore = 0
-		self.explosion_sound = pygame.mixer.Sound("lab_1/Sounds/explosion.ogg")
+		self.explosion_sound = pygame.mixer.Sound("Sounds/explosion.ogg")
 		self.load_highscore()
-		pygame.mixer.music.load("lab_1/Sounds/music.ogg")
+		pygame.mixer.music.load("Sounds/music.ogg")
 		pygame.mixer.music.play(-1)
 
 	def create_obstacles(self) -> None:
@@ -110,6 +111,7 @@ class Game:
 					self.explosion_sound.play()
 					self.check_for_highscore()
 					laser_sprite.kill()
+					logger.info("The mystical ship has been destroyed!")
 
 				for obstacle in self.obstacles:
 					if pygame.sprite.spritecollide(laser_sprite, obstacle.blocks_group, True):
@@ -138,10 +140,12 @@ class Game:
 
 	def game_over(self) -> None:
 		"""Stops the game if the user loses"""
+		logger.info("Game over!")
 		self.run = False
 
 	def reset(self) -> None:
 		"""Updates the playing field"""
+		logger.info("Reset the game!")
 		self.run = True
 		self.lives = 3
 		self.spaceship_group.sprite.reset()
@@ -156,7 +160,7 @@ class Game:
 		"""Check the record and update it if the record is broken"""
 		if self.score > self.highscore:
 			self.highscore = self.score
-
+			logger.info("New highscore!")
 			with open("highscore.txt", "w") as file:
 				file.write(str(self.highscore))
 

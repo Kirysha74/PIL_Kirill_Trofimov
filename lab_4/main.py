@@ -4,6 +4,8 @@ import random
 import pygame
 
 from game import Game
+from logger import logger
+
 
 pygame.init()
 
@@ -14,7 +16,7 @@ OFFSET = 50
 GREY = (29, 29, 27)
 YELLOW = (243, 216, 63)
 
-font = pygame.font.Font("lab_1/Font/monogram.ttf", 40)
+font = pygame.font.Font("Font/monogram.ttf", 40)
 level_surface = font.render("LEVEL 01", False, YELLOW)
 game_over_surface = font.render("GAME OVER", False, YELLOW)
 score_text_surface = font.render("SCORE", False, YELLOW)
@@ -33,11 +35,14 @@ pygame.time.set_timer(SHOOT_LASER, 300)
 MYSTERYSHIP = pygame.USEREVENT + 1
 pygame.time.set_timer(MYSTERYSHIP, random.randint(4000, 8000))
 
+logger.info("The user started the game")
+
 while True:
     #Checking for events
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
+            logger.info("The user has logged out of the game")
             sys.exit()
         if event.type == SHOOT_LASER and game.run:
             game.alien_shoot_laser()
